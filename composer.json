@@ -1,0 +1,31 @@
+{
+    "name": "johnvandeweghe/php-api-library-rest",
+    "description": "A library for building RESTful APIs. Part of the PHPAPLib Project.",
+    "type": "library",
+    "minimum-stability": "alpha",
+    "require": {
+        "php": "^7.1",
+        "johnvandeweghe/php-api-library-http": "^1.0@alpha"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John VanDeWeghe",
+            "email": "vandeweghe@lunixlabs.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PHPAPILibrary\\Rest\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:johnvandeweghe/php-api-library-http.git"
+        }
+    ]
+}
