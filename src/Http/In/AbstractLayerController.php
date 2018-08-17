@@ -7,18 +7,20 @@ use PHPAPILibrary\Core\Data\Exception\RequestException;
 use PHPAPILibrary\Core\Data\Exception\UnableToProcessRequestException;
 use PHPAPILibrary\Core\Data\RequestInterface;
 use PHPAPILibrary\Core\Data\ResponseInterface;
+use PHPAPILibrary\Http\Data\Request;
+use PHPAPILibrary\Http\Data\Response;
 
 abstract class AbstractLayerController extends \PHPAPILibrary\Http\Data\AbstractLayerController
 {
     /**
-     * @param RequestInterface $request
-     * @return ResponseInterface
+     * @param Request $request
+     * @return Response
      * @throws RequestException
      * @throws AccessDeniedException
      * @throws RateLimitExceededException
      * @throws UnableToProcessRequestException
      */
-    protected function getHttpDataResponse(RequestInterface $request): ResponseInterface
+    protected function getHttpDataResponse(Request $request): Response
     {
         try {
             $dataRequest = $this->getRequestTranslator()->translateRequest($request);
