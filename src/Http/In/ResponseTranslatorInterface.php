@@ -12,9 +12,9 @@ use PHPAPILibrary\Rest\RestResponseInterface;
 interface ResponseTranslatorInterface
 {
     /**
-     * @param RestResponseInterface $request
+     * @param RestResponseInterface $response
      * @return Response
      * @throws UnableToTranslateResponseException
      */
-    public function translateResponse(RestResponseInterface $request): Response;
+    public function translateResponse(RestResponseInterface $response): Response;
 }

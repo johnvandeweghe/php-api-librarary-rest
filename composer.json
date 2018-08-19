@@ -1,6 +1,6 @@
 {
     "name": "johnvandeweghe/php-api-library-rest",
-    "description": "A library for building RESTful APIs. Part of the PHPAPLib Project.",
+    "description": "A library for building RESTful APIs. Part of the PHPAPILib Project.",
     "type": "library",
     "minimum-stability": "alpha",
     "require": {

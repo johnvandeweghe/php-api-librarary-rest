@@ -9,5 +9,8 @@ use PHPAPILibrary\Core\Data\ResponseInterface;
  */
 interface RestResponseInterface extends ResponseInterface
 {
-
+    /**
+     * @return RestResponseDataInterface
+     */
+    public function getRestData(): RestResponseDataInterface;
 }

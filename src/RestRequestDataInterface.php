@@ -3,7 +3,7 @@ namespace PHPAPILibrary\Rest;
 
 use PHPAPILibrary\Core\Data\DataInterface;
 
-interface RestDataInterface extends DataInterface
+interface RestRequestDataInterface extends DataInterface
 {
     /**
      * Get data parsed from an HTTP request.

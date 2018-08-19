@@ -3,10 +3,23 @@ namespace PHPAPILibrary\Rest;
 
 use PHPAPILibrary\Core\Data\RequestInterface;
 
+/**
+ * Interface RestRequestInterface
+ * @package PHPAPILibrary\Rest
+ */
 interface RestRequestInterface extends RequestInterface {
+    /**
+     * @return String
+     */
     public function getResource(): String;
 
-    public function getElement(): String;
+    /**
+     * @return null|String
+     */
+    public function getElement(): ?String;
 
-    public function getRestData(): RestDataInterface;
+    /**
+     * @return RestRequestDataInterface
+     */
+    public function getRestData(): RestRequestDataInterface;
 }
