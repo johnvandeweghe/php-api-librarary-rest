@@ -17,4 +17,10 @@ interface ResourceSerializerInterface
      * @throws UnableToTranslateResponseException
      */
     public function serialize(?array $resources);
+    /**
+     * @param ResourceInterface|null $resource
+     * @return array|object|null
+     * @throws UnableToTranslateResponseException
+     */
+    public function serializeOne(?ResourceInterface $resource);
 }

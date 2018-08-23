@@ -22,13 +22,17 @@ class ResponseTranslator extends AbstractResponseTranslator
     /**
      * ResponseTranslator constructor.
      * @param ResourceSerializerInterface $resourceSerializer
-     * @param HeaderBuilderInterface $headerBuilder
+     * @param HeaderBuilderInterface|null $headerBuilder
      */
     public function __construct(
         ResourceSerializerInterface $resourceSerializer,
-        HeaderBuilderInterface $headerBuilder
+        ?HeaderBuilderInterface $headerBuilder = null
     )
     {
+        if($headerBuilder === null) {
+            $headerBuilder = new NoHeaderBuilder();
+        }
+
         $this->resourceSerializer = $resourceSerializer;
         $this->headerBuilder = $headerBuilder;
     }

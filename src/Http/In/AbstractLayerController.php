@@ -30,7 +30,7 @@ abstract class AbstractLayerController extends \PHPAPILibrary\Http\Data\Abstract
     /**
      * @return \PHPAPILibrary\Rest\AbstractLayerController
      */
-    abstract protected function getNextLayer(): \PHPAPILibrary\Rest\AbstractLayerController;
+    abstract protected function getNextLayer(): \PHPAPILibrary\Rest\LayerControllerInterface;
 
     /**
      * @return RequestTranslatorInterface
